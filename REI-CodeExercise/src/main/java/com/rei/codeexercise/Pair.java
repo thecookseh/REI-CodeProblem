@@ -1,20 +1,16 @@
 package com.rei.codeexercise;
 
-/***
- * COMPLETE 2204 20161224
- * @author jerem
- */
 public class Pair {
     private int lowestNumber,highestNumber;
     
     public int getLowestNumber(){ return lowestNumber; }
     public int getHighestNumber(){ return highestNumber; };
             
-    public void setLowestNumber(Integer lowestNumber) { 
+    public void setLowestNumber(int lowestNumber) { 
         this.lowestNumber = highestNumber; 
     }
     
-    public void setHighestNumber(Integer highestNumber) {
+    public void setHighestNumber(int highestNumber) {
         this.highestNumber = highestNumber; 
     }
     
@@ -23,7 +19,7 @@ public class Pair {
         this.highestNumber = 0;        
     }
     
-    public Pair(int firstNumber, Integer secondNumber){
+    public Pair(int firstNumber, int secondNumber){
         this.lowestNumber = firstNumber;
         this.highestNumber = secondNumber;
     }

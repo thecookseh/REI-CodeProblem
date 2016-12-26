@@ -1,6 +1,8 @@
 package com.rei.codeexercise.tests;
 
 import com.rei.codeexercise.CodeExercise;
+//import com.rei.codeexercise.Pair;
+//import java.util.ArrayList;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -48,7 +50,7 @@ public class CodeExerciseTest {
 //    
 //    @Test
 //    public void generateOutputTest() {
-//        LinkedHashSet<Pair> testInput = new LinkedHashSet<>();
+//        ArrayList<Pair> testInput = new ArrayList<>();
 //        String testResults = "(0,5)(6,8)(9,11)(13,14)";
 //        
 //        testInput.add(new Pair(0,5)); 

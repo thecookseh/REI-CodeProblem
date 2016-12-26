@@ -1,5 +1,6 @@
 package com.rei.codeexercise;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 
@@ -12,7 +13,7 @@ public class CodeExercise {
      * @return 
      */
     public static String getIncreasingRanges(int[] input){
-        LinkedHashSet<Pair> pairs = new LinkedHashSet<>();
+        ArrayList<Pair> pairs = new ArrayList<>();
         Pair lastPair = null;
         for(int i = 0;i<input.length;i++) {  
             int lowNumber = i==0 ? 0 : getLowestNumberIndex(i, input);
@@ -30,7 +31,7 @@ public class CodeExercise {
      * @param sets
      * @return 
      */    
-    private static String generateOutput(LinkedHashSet<Pair> sets) {
+    public static String generateOutput(ArrayList<Pair> sets) {
         StringBuilder stringBuilder = new StringBuilder(sets.size()); // SB will have to resize. slight performance hit but negligable
         Iterator iterator = sets.iterator();
         while(iterator.hasNext()) {
@@ -45,7 +46,7 @@ public class CodeExercise {
      * @param input
      * @return 
      */
-    private static int getLowestNumberIndex(int beginIndex, int[] input) { 
+    public static int getLowestNumberIndex(int beginIndex, int[] input) { 
         try {
             if(input[beginIndex] > input[beginIndex +1] || input[beginIndex] == input[beginIndex + 1]) {
                 return getLowestNumberIndex(beginIndex + 1, input);
@@ -63,7 +64,7 @@ public class CodeExercise {
      * @param input
      * @return 
      */
-    private static int getHighestNumberIndex(int beginIndex , int[] input) {     
+    public static int getHighestNumberIndex(int beginIndex , int[] input) {     
         try {
             if(input[beginIndex] < input[beginIndex +1] && input[beginIndex] != input[beginIndex + 1]) {
                 return getHighestNumberIndex(beginIndex + 1, input);
